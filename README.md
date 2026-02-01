@@ -23,7 +23,6 @@ Or, if you prefer using Yarn:
 yarn global add git-mood
 ```
 
-## Setup
 
 Before using Git-Mood, you need to configure your Gemini API key.
 
