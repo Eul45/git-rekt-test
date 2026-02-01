@@ -24,8 +24,6 @@ yarn global add git-mood
 ```
 
 
-Before using Git-Mood, you need to configure your Gemini API key.
-
 1.  **Get your Gemini API Key:** Obtain an API key from Google AI Studio.
 2.  **Configure the CLI:** Run the setup command to store your API key.
 
