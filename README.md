@@ -7,7 +7,7 @@ Git-Mood is a command-line interface (CLI) tool designed to leverage the power o
 *   **AI-Powered Commit Messages:** Generate relevant and descriptive commit messages based on your code changes.
 *   **Code Review Assistance:** Get AI-driven feedback and suggestions on your code.
 *   **README Generation/Improvement:** Utilize AI to help draft or refine your project's README file.
-*   **Model Selection:** Choose between different AI models for your tasks.
+
 
 ## Installation
 
