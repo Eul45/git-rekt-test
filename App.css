@@ -283,7 +283,7 @@ body {
 
 .square.winning {
   background: var(--gradient-secondary);
-  color: white;
+  color: black;
   animation: pulse 1s infinite;
 }
 
