@@ -197,7 +197,7 @@ body {
 .mode-btn:hover {
   border-color: var(--accent-primary);
   background: var(--accent-primary);
-  color: white;
+  color: yellow;
 }
 
 .mode-btn.active {
@@ -284,7 +284,7 @@ body {
 .square.winning {
   background: var(--gradient-secondary);
   color: black;
-  animation: pulse 1s infinite;
+
 }
 
 @keyframes pulse {
