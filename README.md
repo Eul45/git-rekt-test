@@ -1,116 +1,106 @@
-# git-mood
+# Git-Mood
 
-<p align="center">
-  <img src="assets/eyux.gif" alt="git-mood in action" width="600px" style="border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
-</p>
+Git-Mood is a command-line interface (CLI) tool designed to enhance your Git workflow by integrating AI-powered assistance for common Git tasks. It leverages the power of AI to help you generate commit messages, review code, and even draft README files.
 
-<p align="center">
-  <b>The AI-powered Git assistant that understands your code's "mood".</b><br>
-  <i>Generate conventional commits, perform deep code reviews, and push to GitHub—all with Google Gemini.</i>
-</p>
+## Features
 
-<p align="center">
-  <img src="https://img.shields.io/badge/version-2.0.0-blue?style=for-the-badge" alt="Version">
-  <img src="https://img.shields.io/badge/Node.js-18%2B-green?style=for-the-badge" alt="Node Version">
-  <img src="https://img.shields.io/badge/License-ISC-orange?style=for-the-badge" alt="License">
-</p>
+*   **AI-powered commit message generation:** Get intelligent and context-aware commit messages.
+*   **Code review assistance:** Receive AI-driven feedback on your code changes.
+*   **README generation:** Automate the creation of your project's README file.
+*   **Model selection:** Choose and configure the AI model you want to use.
 
----
+## Installation
 
-## 🚀 Key Features
-
-### 🧠 Smart Commits
-Analyzes staged diffs and writes perfect **Conventional Commits**.
-
-<p align="center">
-  <img src="assets/A.png" width="600" alt="Smart Commit Screenshot">
-</p>
-
----
-
-### 🔍 Deep Review
-Senior-level feedback on bugs, security, and clean code patterns.
-
-<p align="center">
-  <img src="assets/d.png" width="600" alt="Deep Review Screenshot">
-</p>
-
----
-
-### ⚡ Flash Models
-Powered by the latest **Gemini Flash** models (Lite 2.5, 2.5, and 3).
-
-<p align="center">
-  <img src="assets/18.png" width="600" alt="Flash Model Screenshot">
-</p>
-
----
-
-## 📦 Installation
+To install Git-Mood globally on your system, run the following command:
 
 ```bash
-# Install globally
 npm install -g git-mood
-
-# Or run instantly with npx
-npx git-mood commit
 ```
 
----
+or
 
-## 🛠️ Getting Started
-
-### 1. Setup Your AI
-Run the setup once to securely store your **Google Gemini API Key** and select your preferred model.
 ```bash
-git-mood setup
+yarn global add git-mood
 ```
-> [!TIP]
-> Get your free API Key at [Google AI Studio](https://aistudio.google.com/apikey).
 
-### 2. The Daily Workflow
+## Setup
 
-#### ✨ Smart Commits & Auto-Push
-Stop struggling with commit messages. `git-mood` reads your diff, suggests a message, commits, and even handles pushing/pulling for you.
+### Gemini API Key Configuration
+
+Git-Mood uses the Gemini API for its AI functionalities. You need to obtain a Gemini API key and configure it for Git-Mood.
+
+1.  **Get your Gemini API Key:**
+    *   Visit the Google AI Studio: [https://aistudio.google.com/](https://aistudio.google.com/)
+    *   Sign in with your Google account.
+    *   Click on "Get API key".
+    *   Follow the prompts to create a new API key.
+
+2.  **Configure the API Key:**
+    Open your terminal and run the setup command:
+
+    ```bash
+    git-mood setup
+    ```
+
+    The CLI will prompt you to enter your Gemini API key. Paste your key and press Enter. The key will be stored securely for future use.
+
+## Usage
+
+Git-Mood provides several commands to integrate AI into your Git workflow.
+
+### `git-mood model`
+
+This command allows you to view and set the AI model to be used by Git-Mood.
+
+*   **View current model:**
+    ```bash
+    git-mood model
+    ```
+*   **Set a specific model:**
+    (Replace `[model_name]` with the desired model, e.g., `gemini-pro`)
+    ```bash
+    git-mood model set [model_name]
+    ```
+
+### `git-mood commit`
+
+Generate an AI-powered commit message for your staged changes.
+
 ```bash
-git add .
 git-mood commit
 ```
 
-#### 🛡️ Instant Code Review
-Before you push, get a second pair of eyes. Identify logic errors or exposed secrets instantly.
+This command will analyze your staged changes and suggest a commit message. You will have the option to accept, edit, or regenerate the message.
+
+### `git-mood review`
+
+Initiate an AI-powered code review for your staged changes.
+
 ```bash
 git-mood review
 ```
 
----
+This command will provide feedback and suggestions on your code.
 
-## 🎮 Commands
+### `git-mood readme`
 
-- `git-mood setup` — Initial configuration (API Key & Model choice).
-- `git-mood commit` — Generate message, commit locally, and optional push.
-- `git-mood review` — AI analysis of your current diff (unstaged + staged).
-- `git-mood model` — Quickly swap between Gemini 2.5 Flash-Lite, Flash 2.5, or Flash 3.
+Generate a draft of your project's README.md file using AI.
 
----
+```bash
+git-mood readme
+```
 
-## 🔒 Security & Privacy
+This command will create a `README.md` file in your project's root directory with an AI-generated content.
 
-- **Local Storage:** Your API key is stored locally on your machine using the `conf` package. 
-- **Direct API:** Your code diffs are sent directly to Google's Gemini API via an encrypted connection and are not stored or processed by any other middleman service.
-- **Config Location:**
-  - **macOS/Linux:** `~/.config/git-mood/`
-  - **Windows:** `%APPDATA%\git-mood\config.json`
+## Configuration
 
----
+Git-Mood's configuration is primarily managed through environment variables or the `git-mood setup` command for sensitive information like API keys. The AI model can be set using the `git-mood model` command.
 
-## 🏗️ Requirements
+## Requirements
 
-- **Node.js** v18.0.0 or higher.
-- **Git** installed and initialized in your project folder.
+*   Node.js (version 14 or higher)
+*   npm or yarn
 
----
+## License
 
-<p align="center">
-  Made by <b>Eyuel Engida</b>
-</p>
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
