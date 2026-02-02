@@ -1,122 +1,73 @@
 # Git-Mood
 
-Git-Mood is a command-line interface (CLI) tool designed to leverage the power of AI (specifically Gemini) to enhance your Git workflow. It aims to provide intelligent assistance for tasks such as generating commit messages, reviewing code, and even helping with your README documentation.
+Git-Mood is a command-line interface (CLI) tool designed to leverage the Gemini API to analyze your Git commit history and provide insights into your development patterns. It aims to offer a unique perspective on your coding journey by interpreting commit messages and potentially suggesting improvements or highlighting trends.
 
 ## Features
 
-*   **AI-Powered Commit Messages:** Generate relevant and descriptive commit messages based on your code changes.
-*   **Code Review Assistance:** Get AI-driven feedback and suggestions on your code.
-*   **README Generation/Improvement:** Utilize AI to help draft or refine your project's README file.
-*   **Model Management:** View and select the AI model to be used for AI-powered features.
+*   **Commit Analysis:** Analyzes commit messages to extract sentiment and potential themes.
+*   **Model Configuration:** Allows you to select and configure the Gemini model for analysis.
+*   **Review Generation:** Can generate summaries or reviews based on commit history.
+*   **README Generation Assistance:** May offer suggestions or content generation for your README files based on project activity.
 
 ## Installation
 
-To install Git-Mood, run the following command:
+You can install Git-Mood globally using npm:
 
 ```bash
 npm install -g git-mood
 ```
 
-Or, if you prefer using Yarn:
-
-```bash
-yarn global add git-mood
-```
-
 ## Setup
 
-1.  **Get your Gemini API Key:** Obtain an API key from Google AI Studio ([https://makersuite.google.com/app/apikey](https://makersuite.google.com/app/apikey)).
-2.  **Configure the CLI:** Run the setup command to store your API key.
+Before using Git-Mood, you need to configure it with your Gemini API key.
+
+1.  **Get your Gemini API Key:** Obtain an API key from the Google AI Studio.
+2.  **Run the setup command:**
 
     ```bash
     git-mood setup
     ```
-
-    This command will prompt you to enter your Gemini API key.
+    This command will prompt you to enter your Gemini API key. It will then be securely stored for future use.
 
 ## Usage
 
-Git-Mood provides several commands to integrate AI into your Git workflow.
+Git-Mood provides several CLI commands to interact with the tool:
 
-### `git-mood model`
+*   **`git-mood setup`**: Configure your Gemini API key.
+*   **`git-mood model`**: Configure the Gemini model to be used for analysis.
+*   **`git-mood commit`**: Analyze your recent commit history.
+*   **`git-mood review`**: Generate a review of your commit history.
+*   **`git-mood readme`**: Get assistance in generating or updating your README file.
 
-View or set the AI model to be used.
+### Examples
 
-**Commands:**
-
-*   `git-mood model list`: List available AI models.
-*   `git-mood model set <model_name>`: Set the AI model to be used.
-
-**Example:**
-
-```bash
-git-mood model list
-git-mood model set gemini-pro
-```
-
-### `git-mood commit`
-
-Generate an AI-powered commit message based on your staged changes.
-
-**Command:**
+**Analyze recent commits:**
 
 ```bash
 git-mood commit
 ```
 
-**Example:**
-
-```bash
-git add .
-git-mood commit
-# Follow the prompts to confirm or edit the generated message
-```
-
-### `git-mood review`
-
-Get AI feedback on your staged code changes.
-
-**Command:**
+**Generate a review of your commit history:**
 
 ```bash
 git-mood review
 ```
 
-**Example:**
-
-```bash
-git add .
-git-mood review
-# The AI will provide review comments and suggestions
-```
-
-### `git-mood readme`
-
-Generate or improve your `README.md` file using AI.
-
-**Command:**
+**Get help with your README:**
 
 ```bash
 git-mood readme
-```
-
-**Example:**
-
-```bash
-git-mood readme
-# The AI will assist in generating or refining your README.md
 ```
 
 ## Configuration
 
-*   **Gemini API Key:** Stored securely after running `git-mood setup`. The key is typically stored in a user-specific configuration file.
-*   **Default Model:** The `git-mood model set` command sets the default AI model. This selection is also persisted for future use.
+The primary configuration involves setting your Gemini API key via the `git-mood setup` command. Model selection can be done using `git-mood model`. Specific details about available models and their configurations will be provided by the `git-mood model` command.
 
 ## Requirements
 
-*   Node.js (version 14 or higher recommended)
-*   npm or Yarn
-*   A valid Gemini API Key
+*   Node.js (version X.X.X or higher recommended)
+*   npm (or yarn)
+*   A valid Google Cloud Project with the Gemini API enabled and an API key.
 
 ## License
 
