@@ -2,9 +2,7 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Sun, Moon, Monitor, Home, Settings, Info, Trophy, History } from "lucide-react";
-import "./App.css";
 
-// Types
 interface GameState {
   board: (string | null)[];
   currentPlayer: string;

@@ -9,9 +9,7 @@ Git-Mood is a command-line interface (CLI) tool designed to leverage the Gemini 
 *   **Review Generation:** Can generate summaries or reviews based on commit history.
 *   **README Generation Assistance:** May offer suggestions or content generation for your README files based on project activity.
 
-## Installation
 
-You can install Git-Mood globally using npm:
 
 ```bash
 npm install -g git-mood
